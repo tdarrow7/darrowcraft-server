@@ -18,4 +18,4 @@ class RoastType(models.Model):
 class Brand(models.Model): 
     id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=36)
-    coffee = models.ForeignKey(Coffee, on_delete=models.CASCADE, related_name='brands')
+    # coffee = models.ForeignKey(Coffee, on_delete=models.CASCADE, related_name='brands')

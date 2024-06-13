@@ -11,7 +11,7 @@ class RoastTypeSerializer(ModelSerializer):
         model = RoastType
         fields = ('id', 'name')
 
-class BrandSerializer(HyperlinkedModelSerializer):
+class BrandSerializer(ModelSerializer):
     class Meta: 
         model = Brand
-        fields = ('id', 'name', 'coffee')
+        fields = ('id', 'name')
