@@ -1,6 +1,7 @@
 from django.contrib import admin
 from django.urls import include, path
-from darrowcraftserver import settings
+
+from django.conf import settings
 from django.conf.urls.static import static
 # f import 
 from server import views
@@ -20,5 +21,6 @@ urlpatterns = [
     path('brand-details/<int:pk>', views.BrandDetails.as_view(), name="brand_detail"),
 ]
 
-# urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
+# add at the last
+urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
